@@ -1,0 +1,329 @@
+img {
+  max-width: 100%;
+}
+.styleguiding-header {
+  background: $gg-blue-70;
+  color: $gg-white;
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+a.contents-btn {
+  position: fixed;
+  background: $gg-blue;
+  color: $gg-white;
+  z-index: 200;
+  display: block;
+  padding: 15px;
+  z-index: 20;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  top: -40px;
+  left: 0;
+  opacity: 0;
+  font-weight: bold;
+
+  i {
+    margin-right: 10px;
+  }
+}
+a.contents-btn.show {
+  left: 0;
+  top: 0;
+  opacity: 1;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }  
+}
+// stationary!
+.fun-header-thing {
+  display: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: absolute;
+  @include media-query (sm) {
+    display: block;
+  }
+}
+
+.logo-link {
+  float: left;
+  @include media-query (xs-max) {
+    width: 150px;
+  }
+}
+.logo {
+  display: block;
+  margin: 30px 0px 0;
+  @include media-query (xs-max) {
+    margin: 20px 0;
+  }
+  @include media-query (md) {
+    margin: 30px 30px 0;
+  }
+}
+
+
+
+.styleguiding-header-intro-inner {
+  @include media-query (xs-max) {
+    max-width: 380px;
+  }
+}
+
+
+#layouts {
+  box-shadow: 0 0 10px #ccc;
+  background:#f9f9f9;
+}
+.center{
+  text-align: center;
+}
+.styleguiding-nav-top {
+  margin-top: 40px;
+  float: right;
+  font-size: 20px;
+  @include media-query (xs-max) {
+    margin-top: 25px;
+  }
+  li {
+    float: left;
+    clear: none;
+    margin: 0 0 0 10px;
+    @include media-query (xs-max) {
+      clear: both;
+    }    
+    a {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      float: left;
+      clear: none;
+      color: $gg-white;
+      border-radius:40px;
+      padding: 10px 20px;
+      &:hover {
+        background: rgba(255,255,255,0.3);
+      }
+      @include media-query (xs-max) {
+        font-size: 16px;
+      }
+    }
+  }
+  .active a {
+    color: $gg-white;
+    background: $gg-blue;
+    &:hover {
+      color: $gg-white;
+      background: darken($gg2-blue, 10%);
+    }
+  }
+}
+
+
+.contents {
+  margin:0 0 20px;
+  clear: both;
+  @include media-query (md) {
+    margin:0 0 60px;
+  }
+  padding: 0;
+  li {
+    font-size: 18px;
+    font-weight: bold;
+    @include media-query (sm) {
+      font-size: 20px;
+    }    
+    @include media-query (md) {
+      font-size: 24px;
+      font-weight: normal;
+    }
+    list-style-type: none;
+  }
+  li:before {
+    position: relative;
+    float: left;
+    text-align: right;
+    font-weight: normal;
+    color: $gg-blue-20;
+    margin: 0 10px 0 0;
+    width: auto;
+    @include media-query (sm) {
+      margin: 1px 0 0 -68px;
+      width: 51px;
+    }
+    @include media-query (xs-max) {
+      height: 30px;
+      width: 20px;
+    }
+  }  
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+// Add nice looking numbers to contents
+.contents-1:before {
+  content: "1";
+}
+.contents-2:before {
+  content: "2";
+}
+.contents-3:before {
+  content: "3";
+}
+.contents-4:before {
+  content: "4";
+}
+.contents-5:before {
+  content: "5";
+}
+.contents-6:before {
+  content: "6";
+}
+.contents-7:before {
+  content: "7";
+}
+.contents-8:before {
+  content: "8";
+}
+.contents-9:before {
+  content: "9";
+}
+.contents-10:before {
+  content: "10";
+}
+
+
+.sg-section {
+  padding: 60px 0 0;
+  li{
+    clear:both;
+    margin:10px 0;
+  }
+  h2 {
+  }
+  h2:before {
+    position: relative;
+    float: left;
+    text-align: right;
+    font-weight: normal;
+    color: $gg-blue-70;
+    margin: 0 10px 0 0;
+    width: auto;
+    @include media-query (sm) {
+      margin: 1px 0 0 -68px;
+      width: 51px;
+    }
+  }
+}
+.sg-section-1 h2:before {
+  content: "1";
+}
+.sg-section-2 h2:before {
+  content: "2";
+}
+.sg-section-3 h2:before {
+  content: "3";
+}
+.sg-section-4 h2:before {
+  content: "4";
+}
+.sg-section-5 h2:before {
+  content: "5";
+}
+.sg-section-6 h2:before {
+  content: "6";
+}
+.sg-section-7 h2:before {
+  content: "7";
+}
+.sg-section-8 h2:before {
+  content: "8";
+}
+.sg-section-9 h2:before {
+  content: "9";
+}
+.sg-section-10 h2:before {
+  content: "10";
+}
+
+.btn-show-example {
+  background: $gg-blue-20;
+  display: block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  float: left;
+  &:hover {
+    text-decoration: none;
+    color: $gg-blue;
+    background: darken($gg-blue-20, 5%);
+  }
+  @include media-query (md) {
+    font-size: 19px;
+  }
+  i {
+    margin: 5px 8px 5px -6px;
+    display: block;
+    float: left;
+    width: 20px;
+  }
+}
+.btn-show-example.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  i:before {
+    content: "\f107";
+  }
+  &:hover {
+    background: $gg-blue-20;
+  }
+}
+.btn-checklist {
+  display: block;
+  margin-top: 20px;
+  float: left;
+  margin-left: 10px;
+  padding: 8px 20px;
+  @include media-query (md) {
+    font-size: 19px;
+  }  
+}
+// make text one word for really small screens
+.btn-checklist span, .btn-show-example span {
+  @include media-query (xs-max) {
+    display: none;
+  }
+}
+.btn-checklist, .btn-show-example {
+  @include media-query (xs-max) {
+    text-transform: capitalize;
+  }
+}
+.sg-example {
+  background: $gg-blue-20;
+}
+// Give last sg example a huge footer
+.sg-example-inner {
+  padding: 15px 0;
+  @include media-query (md) {
+    padding: 40px 0; 
+  }
+}
+.sg-example-row {
+  padding: 15px 0;
+  @include media-query (md) {
+    padding: 40px 0; 
+  }
+}
+
+.affix.nav-main{
+  top:30px;
+  position: fixed;
+}

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
+gem 'dotenv-deployment'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -29,5 +31,3 @@ gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
-gem 'dotenv-rails'
-gem 'dotenv-deployment'

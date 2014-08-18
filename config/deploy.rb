@@ -3,7 +3,7 @@ require ::File.expand_path('../../lib/capistrano/database_tasks',  __FILE__)
 lock '3.2.1'
 
 set :application, 'girls-matter'
-set :repo_url, 'git@gitlab.yoomee.com:girlguiding/girlguiding.git'
+set :repo_url, 'git@gitlab.yoomee.com:girlguiding/girls-matter.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

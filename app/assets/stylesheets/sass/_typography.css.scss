@@ -1,0 +1,151 @@
+// General font styles
+
+body,
+p {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  @include media-query (md) {
+    font-size: 19px;
+  }
+  a {
+
+  }
+}
+
+h1 {
+  font-size: 32px;
+  @include media-query (sm) {
+    font-size: 48px;
+    margin-top: 0.625em;
+    margin-bottom: 1.25em;
+  }
+}
+.heading-secondary {
+  line-height: 1.11111;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  color: $gg-blue-70;
+  @include media-query (sm) {
+    font-size: 27px;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 1.04167;
+  font-weight: 400;
+  margin-top: 1.04167em;
+  margin-bottom: 0.41667em;
+  @include media-query (sm) {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  @include media-query (sm) {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+h4 {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 0.625em;
+  margin-bottom: 0.3125em;
+  @include media-query (sm) {
+    font-size: 19px;
+    line-height: 1.31579;
+  }  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.sub-title,
+.team-image p,
+.blog-post-content b, .blog-post-content strong,
+.blog-post-content ol > li:before,
+b {
+  color:$gg-blue;
+  font-weight: bold;
+
+}
+.lead {
+  font-weight: 400;
+  text-transform: none;
+  padding: 10px 0;
+  margin: 0 0 1.5em 0;
+}
+
+.light, p.light, h1.light, h2.light, h3.light, h4.light {
+
+}
+p {
+  margin-top: 0.3125em;
+  margin-bottom: 1.25em;
+}
+li {
+  margin-bottom: 5px;
+}
+.page-header {
+  padding-bottom: 0.41667em;
+  border-bottom: 2px solid #428dcc;
+}
+
+// Link styles
+
+a:hover,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  color: $gg-blue;
+
+}
+
+.white{
+  color: #fff;
+}
+.large{
+  font-size: 24px;
+}
+.small{
+ font-size: 16px; 
+}
+.h1{
+  font-size: 48px;
+  margin-top: 0.625em;
+margin-bottom: 1.25em;
+}
+.h2{
+  font-size: 22px;
+  @include media-query (sm) {
+    font-size: 26px;
+  }  
+  @include media-query (md) {
+    font-size: 30px;
+  }
+  line-height: 36px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin:0;
+  padding: 0;
+
+}
+.h3{
+  margin-top: 1.875em;
+  margin-bottom: 0.83333em;
+}

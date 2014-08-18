@@ -1,0 +1,66 @@
+/ Begin dotmailer sign up
+:javascript
+  function validate_signup(frm) {
+  var emailAddress = frm.Email.value;
+  var errorString = '';
+  if (emailAddress == '' || emailAddress.indexOf('@') == -1) {
+  errorString = 'Please enter your email address';
+  }
+
+  var els = frm.getElementsByTagName('input');
+  for (var i = 0; i < els.length; i++)
+  {
+  if (els[i].className == 'text' || els[i].className == 'date' || els[i].className == 'number')
+  {
+  if (els[i].value == '')
+  errorString = 'Please complete all required fields.';
+  }
+  else if (els[i].className == 'radio')
+  {
+  var toCheck = document.getElementsByName(els[i].name);
+  var radioChecked = false;
+  for (var j = 0; j < toCheck.length; j++)
+  {
+  if (toCheck[j].name == els[i].name && toCheck[j].checked)
+  radioChecked = true;
+  }
+  if (!radioChecked)
+  errorString = 'Please complete all required fields.';
+  }
+  }
+
+  var isError = false;
+  if (errorString.length > 0)
+  isError = true;
+
+  if (isError)
+  alert(errorString);
+  return !isError;
+  }
+
+
+.container
+.strip-gm-header.strip-gm-header-small.relative.full-section
+  .container.gm-header-text-container.center
+    .gm-header-text
+      =image_tag('large-gg-logo.png')
+      .col-md-8.col-md-offset-2
+        %h3 Giving girls a say in politics
+        %p
+          In May 2015, people across the UK will vote for the MPs they want to represent them. And in the lead-up to the General Election we want to make sure that girls’ voices are part of the discussion, even if they’re not yet old enough to vote.
+        .row
+          %hr.col-md-8.col-md-offset-2
+
+        %h3 Sign up to hear more
+        %p
+          Soon, we’ll challenge MPs from every party to pledge their support. Will you help us take girls’ voices right to the heart of government?
+      .col-sm-8.col-sm-offset-2
+        %form#signup{action: "", method: "post", name: "signup", onsubmit: "return validate_signup(this)"}
+          %input{name: "addressbookid", type: "hidden", value: ""}
+          / UserID - required field, do not remove
+          %input{name: "userid", type: "hidden", value: ""}
+          / ReturnURL - when the user hits submit, they'll get sent here
+          %input{name: "ReturnURL", type: "hidden", value: ""}
+          / Email - the user's email address
+          %input.required.email.col-sm-8.col-xs-12{name: "Email", type: "email", value: "", placeholder: "Enter your email address"}
+          %input.button{name: "Submit", type: "Submit", value: "Sign up", class: "btn btn-hollow col-sm-3 col-xs-12", onclick: "_gaq.push(['_trackEvent', 'Form', 'Sign up', 'Girls matter sign up']);"}

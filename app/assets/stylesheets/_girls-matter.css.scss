@@ -1,0 +1,240 @@
+
+body {
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: white
+}
+
+body.design_girls-matter{
+  background: image_url('girls-matter-head.jpg')  #017C8F;
+  @include media-query (xs-max) {
+    background:#017C8F;
+  }
+}
+.gm-header-text-container{
+  height: 100%;
+  .logo{
+    background: image_url("logo.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 100px;;
+    width: 200px;
+    background-size:200px;
+    @include media-query (md-max){
+      background: image_url("small-gg-logo.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      float:right;
+      width:170px;
+      height:90px;
+    }
+  }
+}
+.strip-gm-header{
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 999;
+  background: image_url('girls-matter-head.jpg') no-repeat center center #017C8F;
+  background-size: cover;
+  @include media-query (xs-max) {
+    background:#017C8F;
+  }
+  .gm-header-text{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top:50px;
+    @include media-query (xs) {
+      margin-top:50px;
+    }
+    @include media-query (md) {
+      margin-top:160px;
+    }
+    @media (max-height: 1600px){
+      margin-top:50px;
+    }
+    @media (max-height: 1000px){
+      margin-top:50px;
+    }
+    @media (max-height: 800px) and (min-width: 1210px){
+      margin-top:-73px;
+    }
+  }
+  h3{
+    color:#fff;
+  }
+  p{
+    color:#fff;
+    @include media-query (md) {
+      font-size:18px;
+    }
+  }
+  input{
+    padding:20px;
+    color:#00353e;
+    border:0;
+    border-radius:4px;
+  }
+  .btn.btn-hollow{
+    border: 3px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 23px;
+    padding: 14px 20px;
+    text-align: center;
+    margin-left:20px;
+    background: transparent;
+    &:hover{
+      background: #fff;
+      color:#333;
+    }
+    @include media-query (xs-max) {
+      margin:10px 0 50px 0px;
+    }
+    @media (max-height: 1030px){
+      margin-bottom:50px;
+    }
+  }
+}
+
+
+/* Longform-piece */
+
+.side-nav{
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  z-index: 9999;
+  &.affix-top{
+    position:absolute;
+  }
+  ul{
+    padding:0;
+  }
+}
+
+.side-nav li a:before {
+  background: #fff;
+  border: 1px solid white;
+  border-radius:50%;
+  content: " ";
+  cursor: pointer;
+  display: inline-block;
+  height: 14px;
+  margin-right: 10px;
+  margin-top: 0;
+  opacity: 1;
+  vertical-align: middle;
+  width: 14px;
+}
+.side-nav .nav li{
+  list-style:none;
+  a {
+    color: #fff;
+    display: block;
+    height: 30px;
+    margin-left: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-property: color;
+    transition-timing-function: ease-in;
+    width: 30px;
+    font-size:12px;
+    text-transform:uppercase;
+    outline:none;
+    &:hover, &:active, &:link{
+      background:transparent;
+    }
+    &:hover{
+      min-width:195px;
+    }
+  }
+}
+.side-nav li.active{
+  background: transparent;
+  a{
+    min-width:195px;
+    &:before{
+      background:transparent;
+      border:1px solid #fff;
+    }
+  }
+}
+
+.scroll-button{
+  position:absolute;
+  bottom:60px;
+  i{
+    font-size:30px;
+    color:#fff;
+  }
+  a{
+    color:#fff;
+  }
+}
+.gm-blue{
+  background: $gm-blue;
+  h2,p{
+    color: #fff;
+  }
+}
+.gm-pink{
+  background: $gm-pink;
+  h2,p{
+    color: #fff;
+  }
+}
+.gm-orange{
+  background: $gm-orange;
+  h2,p{
+    color: #fff;
+  }
+}
+
+
+
+
+
+.white{
+  color:#fff;
+}
+
+
+
+
+
+/* Sections style */
+
+
+.right-div {
+  border-right: 1px solid #fff;
+}
+
+.quote-box{
+  background: image_url('quote-box.png') no-repeat center center #fff;
+}
+
+.strip-gm-header.strip-gm-header-small{
+  .gm-header-text{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top:50px;
+    @include media-query (xs) {
+      margin-top:50px;
+    }
+    @include media-query (md) {
+      margin-top:160px;
+    }
+    @media (max-height: 1600px){
+      margin-top:50px;
+    }
+    @media (max-height: 1000px){
+      margin-top:50px;
+    }
+    @media (max-height: 800px) and (min-width: 1210px){
+      margin-top:50px;
+    }
+  }
+}
+
+.center, { text-align:center; }

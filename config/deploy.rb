@@ -1,4 +1,3 @@
-require ::File.expand_path('../../lib/capistrano/database_tasks',  __FILE__)
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 

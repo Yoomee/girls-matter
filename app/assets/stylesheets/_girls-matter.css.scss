@@ -4,7 +4,8 @@ body {
     font-size: 16px;
     line-height: 1.428571429;
     color: #555555;
-    background-color: white
+    background-color: #017C8F;
+    background: image_url('girls-matter-head.jpg') repeat-y center center #017C8F;
 }
 
 body.design_girls-matter{
@@ -36,9 +37,7 @@ body.design_girls-matter{
   z-index: 999;
   background: image_url('girls-matter-head.jpg') no-repeat center center #017C8F;
   background-size: cover;
-  @include media-query (xs-max) {
-    background:#017C8F;
-  }
+
   .gm-header-text{
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;

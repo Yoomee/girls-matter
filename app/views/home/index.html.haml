@@ -1,42 +1,47 @@
 / Begin dotmailer sign up
 :javascript
   function validate_signup(frm) {
-  var emailAddress = frm.Email.value;
-  var errorString = '';
-  if (emailAddress == '' || emailAddress.indexOf('@') == -1) {
-  errorString = 'Please enter your email address';
-  }
+    var emailAddress = frm.Email.value;
+    var errorString = '';
+    if (emailAddress == '' || emailAddress.indexOf('@') == -1) {
+      errorString = 'Please enter your email address';
+    }
+
 
   var els = frm.getElementsByTagName('input');
   for (var i = 0; i < els.length; i++)
   {
-  if (els[i].className == 'text' || els[i].className == 'date' || els[i].className == 'number')
-  {
-  if (els[i].value == '')
-  errorString = 'Please complete all required fields.';
-  }
-  else if (els[i].className == 'radio')
-  {
-  var toCheck = document.getElementsByName(els[i].name);
-  var radioChecked = false;
-  for (var j = 0; j < toCheck.length; j++)
-  {
-  if (toCheck[j].name == els[i].name && toCheck[j].checked)
-  radioChecked = true;
-  }
-  if (!radioChecked)
-  errorString = 'Please complete all required fields.';
-  }
+      if (els[i].className == 'text' || els[i].className == 'date' || els[i].className == 'number')
+      {
+          if (els[i].value == '')
+              errorString = 'Please complete all required fields.';
+      }
+      else if (els[i].className == 'radio')
+      {
+          var toCheck = document.getElementsByName(els[i].name);
+          var radioChecked = false;
+          for (var j = 0; j < toCheck.length; j++)
+          {
+              if (toCheck[j].name == els[i].name && toCheck[j].checked)
+                  radioChecked = true;
+          }
+          if (!radioChecked)
+              errorString = 'Please complete all required fields.';
+      }
   }
 
-  var isError = false;
-  if (errorString.length > 0)
-  isError = true;
 
-  if (isError)
-  alert(errorString);
-  return !isError;
+
+    var isError = false;
+      if (errorString.length > 0)
+          isError = true;
+
+      if (isError)
+          alert(errorString);
+    return !isError;
   }
+
+
 
 
 .container
@@ -45,22 +50,27 @@
     .gm-header-text
       =image_tag('large-gg-logo.png')
       .col-md-8.col-md-offset-2
-        %h3 Giving girls a say in politics
+        %h2.white Giving girls a voice
+        %h3 Whatâ€™s it like being a girl today?
+        %p We donâ€™t think enough of the people in power know the answer.
         %p
-          In May 2015, people across the UK will vote for the MPs they want to represent them. And in the lead-up to the General Election we want to make sure that girls’ voices are part of the discussion, even if they’re not yet old enough to vote.
+          Weâ€™ve asked thousands of girls and young women what matters to them, and what changes they want to see. In the debates leading up to the General Election in May 2015, Girlguiding will make sure that the issues that matter to girls are taken seriously.
         .row
           %hr.col-md-8.col-md-offset-2
 
         %h3 Sign up to hear more
         %p
-          Soon, we’ll challenge MPs from every party to pledge their support. Will you help us take girls’ voices right to the heart of government?
+          We think girlsâ€™ and young womenâ€™s voices should be heard. We think they should have a say in the decisions that affect their lives.
+        %p
+          Feel the same? Sign up to hear more about our new campaign first.
       .col-sm-8.col-sm-offset-2
-        %form#signup{action: "", method: "post", name: "signup", onsubmit: "return validate_signup(this)"}
-          %input{name: "addressbookid", type: "hidden", value: ""}
+
+        %form#signup{:action => "http://girlguidingnews.org.uk/signup.ashx", :method => "post", :name => "signup", :onsubmit => "return validate_signup(this)"}
+          %input{:name => "addressbookid", :type => "hidden", :value => "3085471"}/
           / UserID - required field, do not remove
-          %input{name: "userid", type: "hidden", value: ""}
+          %input{:name => "userid", :type => "hidden", :value => "15871"}/
           / ReturnURL - when the user hits submit, they'll get sent here
-          %input{name: "ReturnURL", type: "hidden", value: ""}
+          %input{:name => "ReturnURL", :type => "hidden", :value => "http://new.girlguiding.org.uk/signup-success"}/
           / Email - the user's email address
-          %input.required.email.col-sm-8.col-xs-12{name: "Email", type: "email", value: "", placeholder: "Enter your email address"}
-          %input.button{name: "Submit", type: "Submit", value: "Sign up", class: "btn btn-hollow col-sm-3 col-xs-12", onclick: "_gaq.push(['_trackEvent', 'Form', 'Sign up', 'Girls matter sign up']);"}
+          %input.required.email.col-sm-8.col-xs-12{:name => "Email", :type => "text", placeholder: "Enter your email address"}/
+          %input.button{:name => "Submit", :type => "Submit", :value => "Submit", class: "btn btn-hollow col-sm-3 col-xs-12", onclick: "_gaq.push(['_trackEvent', 'Form', 'Sign up', 'Girls matter sign up']);"}

@@ -1,28 +1,15 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The Girls matter holding page is hosted on the [girlguiding](https://gitlab.yoomee.com/girlguiding/girlguiding) cluster
+so all environment details there are applicable here.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+### Deployment
+Environment variables in production are set using [dotenv](https://github.com/bkeepers/dotenv).
+Each App server requires a .env file to be present in `/var/www/girlguiding/shared`, Capistrano symlinks this in to the current deployment directory and then 
+the dotenv-deployment gem loads them in to `ENV`.
+
+Deploy without migrations:
+
+```
+cap production deploy
+```

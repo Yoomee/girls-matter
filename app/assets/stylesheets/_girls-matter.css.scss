@@ -89,6 +89,9 @@ body.design_girls-matter{
     @include media-query (xs-max) {
       margin:10px 0 50px 0px;
     }
+    @media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+      margin:0px 0 50px 10px;
+    }
     @media (max-height: 1030px){
       margin-bottom:50px;
     }
